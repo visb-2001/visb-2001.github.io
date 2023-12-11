@@ -32,10 +32,6 @@ header{
     padding-bottom: 10px;
 }
 
-.navbar{
-    font-size: 1em;
-}
-
 .navbar a{
     font-family: Courier;
     text-decoration: none;
@@ -230,6 +226,7 @@ img{
     flex-direction: column;
     padding: 17px 1px 17px 1px;
     max-width: 600px;
+    margin: 10px auto;
 }
 
 .proj-hidden{
@@ -258,6 +255,7 @@ img{
     justify-content: center;
     border-bottom: 0.5px dashed #616161;
     border-top:  0.5px dashed #616161;
+    padding: 5px;
 }
 
 .proj-prev div{
