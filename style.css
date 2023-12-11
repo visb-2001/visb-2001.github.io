@@ -270,9 +270,6 @@ img{
     color: #ff4545;
 }
 
-.proj-prev img{
-    margin: 1px;
-}
 
 .proj-hidden li{
     padding: 5px;
@@ -300,6 +297,11 @@ footer {
 @media (max-width: 800px) {
     .ppimg {
       flex-direction: column-reverse;
+    }
+
+    .ppimg img{
+        height: 50%;
+        width: 50%;
     }
 
     .proj-prev{
