@@ -58,7 +58,7 @@ header{
 }
 
 .div-about{
-    width: 800px;
+    max-width: 800px;
 }
 
 .content-title{
@@ -229,7 +229,7 @@ img{
     display: flex;
     flex-direction: column;
     padding: 17px 1px 17px 1px;
-    width: 600px;
+    max-width: 600px;
 }
 
 .proj-hidden{
