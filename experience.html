@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visweswaran Baskaran - Robotics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo">Visweswaran <strong>Baskaran;</strong></a>
+        <nav class="navbar">
+            <b>[</b>
+            <a href="about.html">About</a>
+            <b>/</b>
+            <a href="experience.html">Experience</a>
+            <b>/</b>
+            <a href="projects.html">Projects</a>
+            <b>/</b>
+            <a href="https://drive.google.com/file/d/1O9EsBxVYjKQZaSSBMysQAeqMCFOhqaCD/view?usp=sharing">CV</a>
+            <b>/</b>
+            <a href="" onclick="toggleMode()" id="mode">𖤓</a>
+            <b>]</b>
+        </nav>
+    </header>
+
+    <section id="experience" class="content">
+        <div class="div-exp">
+            <div class="outer">
+                <div class="card">
+                    <div class="info">
+                      <h4 class="title">University Of Pennsylvania - Teaching Assistant</h4>
+                      <h5 class="sub-title">TA | Philadelphia | Aug 23 - Dec 23</h5>
+                      <p class="para">Serving as the Graduate Teaching Assistant for Deep Learning: A Hands-On Introduction (ESE 3060) with Prof. Hamed Hassani.</p>
+                    </div>
+                  </div>
+              <div class="card">
+                <div class="info">
+                  <h4 class="title">USC Viterbi - Dynamic Robotics and Control Lab</h4>
+                  <h5 class="sub-title">Intern | Los Angeles | May 22 - Nov 22</h5>
+                  <p class="para">Developed a LSTM architecture in MATLAB for enhancing the stability and tracking performance of an MPC controller for loaded quadrupeds during walking and trotting gaits.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                    <h4 class="title">IIT Madras - Robotics Lab</h4>
+                    <h5 class="sub-title">Intern | India | Jul 21 - Jun 22</h5>
+                    <p class="para">Worked on a DDPG agent based deep reinforcement learning algorithm to improve safe position and force tracking of teleoperated system in the presence of communication delays.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                    <h4 class="title">IIT Roorkee - Sohom Chakrabarty Lab</h4>
+                    <h5 class="sub-title">Intern | India | Jun 21 - Jul 21</h5>
+                    <p class="para">Implemented a novel algorithm for shape formation, path planning and collision avoidance of a multi-agent system in an obstacle riddled environment simulated in ROS and Gazebo.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                    <h4 class="title">NIT Tiruchirappalli - Spider R&D</h4>
+                    <h5 class="sub-title">Researcher | India | Jan 20 - May 23</h5>
+                    <p class="para">Conducted machine learning and robotics research along with mentoring over 20 students to participate in various national level competitions as a part of the research and development club. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+        <p>&copy; Copyright 2023 Visweswaran Baskaran | Made From Scratch With HTML/CSS/JS</p>
+    </footer>
+</body>
+
+<script>
+    let mode;
+    mode = localStorage.getItem('mode');
+
+    if (mode == 'light'){
+        light()
+    }else{
+        dark()
+    }
+
+    function light(){
+        var btn = document.getElementById("mode")
+        btn.innerHTML = "☾"
+        localStorage.setItem('mode', 'light')
+        var r = document.querySelector(':root')
+        r.style.setProperty('--front', '#1e1c1c')
+        r.style.setProperty('--back', '#F5F5F5')
+    }
+
+    function dark(){
+        var btn = document.getElementById("mode")
+        btn.innerHTML = "𖤓"
+        localStorage.setItem('mode', 'dark')
+        var r = document.querySelector(':root')
+        r.style.setProperty('--front', '#FFFFFF')
+        r.style.setProperty('--back', '#1e1c1c')
+    }
+
+    function toggleMode(){
+        var btn = document.getElementById("mode")
+        if (btn.innerHTML == "𖤓"){
+            light()
+        }
+        else{
+            dark()
+        }
+    }
+</script>
+
+</html>

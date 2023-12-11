@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visweswaran Baskaran - Robotics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo">Visweswaran <strong>Baskaran;</strong></a>
+        <nav class="navbar" id="navb">
+            <b>[</b>
+            <a href="about.html">About</a>
+            <b>/</b>
+            <a href="experience.html">Experience</a>
+            <b>/</b>
+            <a href="projects.html">Projects</a>
+            <b>/</b>
+            <a href="https://drive.google.com/file/d/1O9EsBxVYjKQZaSSBMysQAeqMCFOhqaCD/view?usp=sharing">CV</a>
+            <b>/</b>
+            <a href="" onclick="toggleMode()" id="mode">𖤓</a>
+            <b>]</b>
+        </nav>
+    </header>
+
+    <section id="about" class="content">
+        <div class="div-about">
+            <h1 class="content-title">About</h1>
+            <div class="ppimg">
+                <p>
+                    Hello traveler! I'm Visweswaran Baskaran, a passionate explorer and builder in the realm of robotics. Currently, I'm pursuing my Master's in Robotics at the <a href="https://www.grasp.upenn.edu/people/visweswaran-baskaran/" class="link">GRASP Lab</a> at the University of Pennsylvania, focusing on Computer Vision, Deep Learning, and Robot Perception.
+                    <br><br>Previously, I earned my Bachelor's in Electrical and Electronics Engineering from the National Institute of Technology, Tiruchirappalli. 
+                    During the summer of 2022, I worked on legged robots at the <a href="https://sites.usc.edu/quann/" class="link">Dynamic Robotics and Control Lab</a> at USC Viterbi under the guidance of Prof. Quan Nguyen through the IUSSTF-Viterbi Scholarship Program.
+                    Prior to that, I conducted research on robust teleoperated systems at the <a href="https://ed.iitm.ac.in/~robotics_lab/index.html" class="link">Robotics Lab</a> in IIT Madras under the supervision of Prof. Asokan Thondiyath.
+                    <br><br> In essence, I'm enthusiastic about all things robotics (or movies) and am always open to a chat!
+                </p>
+                <img src='pp.JPG' height="30%" width="30%"/>
+            </div>
+        </div>
+    </section>
+    <section id="interest" class="content">
+        <div class="div-about">
+            <h1 class="content-title">Professional Interest</h1>
+            <p>
+                I'm passionate about exploring and building foundational models for robots to see, think and act through perception, learning and control respectively. In particular, I'm keen on exploring the seamless intersection of these three domains to create robust algorithms. 
+                I want to use the prior knowledge from classical perception and control approaches to optimize robot learning and the vice versa, that is to use state-of-the art deep learning methods to learn a better model for classical algorithms.
+
+            </p>
+        </div>
+    </section>
+    <section id="contact" class="content">
+        <div class="div-about">
+            <h1 class="content-title">Contact</h1>
+            <p>
+                Feel free to reach out! I'm always open and eagerly looking forward to discussions and collaborations!
+            </p>
+            <div class="icon">
+                <a href="mailto:visb@seas.upenn.edu" class="fa fa-envelope"></a>
+                <a href="https://www.linkedin.com/in/visb-visweswaran-baskaran/" class="fa fa-linkedin"></a>
+                <a href="https://github.com/visb-2001" class="fa fa-github"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Copyright 2023 Visweswaran Baskaran | Made From Scratch With HTML/CSS/JS</p>
+    </footer>
+</body>
+
+<script>
+    let mode;
+    mode = localStorage.getItem('mode');
+
+    if (mode == 'light'){
+        light()
+    }else{
+        dark()
+    }
+
+    function light(){
+        var btn = document.getElementById("mode")
+        btn.innerHTML = "☾"
+        localStorage.setItem('mode', 'light');
+        var r = document.querySelector(':root')
+        r.style.setProperty('--front', '#1e1c1c')
+        r.style.setProperty('--back', '#FAFAFA')
+    }
+
+    function dark(){
+        var btn = document.getElementById("mode")
+        btn.innerHTML = "𖤓"
+        localStorage.setItem('mode', 'dark');
+        var r = document.querySelector(':root')
+        r.style.setProperty('--front', '#FFFFFF')
+        r.style.setProperty('--back', '#1e1c1c')
+    }
+
+    function toggleMode(){
+        var btn = document.getElementById("mode")
+        if (btn.innerHTML == "𖤓"){
+            light()
+        }
+        else{
+            dark()
+        }
+    }
+</script>
+
+</html>

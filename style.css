@@ -1,0 +1,296 @@
+/* General styles */
+:root {
+    --front: #ffffff;
+    --back: #1e1c1c; 
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: monospace;
+    background-color: var(--back);
+    color: var(--front);
+}
+
+header{
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid #BDBDBD;
+}
+
+
+.logo{
+    font-family: 'Courier New';
+    font-size: 30px;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.navbar a{
+    font-family: Courier;
+    font-size: 15px;
+    text-decoration: none;
+    color:#ff4545;
+}
+
+.navbar b{
+    font-family: monospace;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-about{
+    width: 800px;
+}
+
+.content-title{
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: 0.5px dashed #616161;
+    border-top:  0.5px dashed #616161;
+}
+
+.ppimg{
+    display: flex;
+}
+
+img{
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.link{
+    text-decoration: none;
+    color:#ff4545;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.icon a{
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    color: var(--front);
+}
+
+.icon a:hover{
+    color: #ff4545;
+}
+
+  /* Timeline Container */
+.div-exp {
+    margin: 10px auto;
+    padding: 10px;
+}
+  
+  /* Card container */
+.card {
+    position: relative;
+    max-width: 450px;
+}
+  
+  /* setting padding based on even or odd */
+.card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+  /* Global ::before */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid var(--front);
+}
+  
+  /* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -2px;
+    bottom: -2px;
+    border-width: 2px 0 2px 2px;
+    border-radius: 40px 0 0 40px;
+}
+
+  /* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 2px 2px 2px 0;
+    border-radius: 0 40px 40px 0;
+}
+  
+  /* Removing the border if it is the first card */
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+  
+  /* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+  
+  /* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+  
+  /* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 0.5px dashed #616161;
+    border-top:  0.5px dashed #616161;
+}
+
+.info .para{
+    font-size: 12px;
+}
+  
+  /* Title of the card */
+.title {
+    position: relative;
+    margin: 0px;
+    font-size: 15px;
+}
+  
+  /* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--back);
+    border-radius: 10px;
+    border: 3px solid #ff4545;
+}
+
+.sub-title {
+    color: #ff4545;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+  
+  /* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+    text-align: right;
+}
+
+.card:nth-child(even) > .info > .sub-title {
+    text-align: right;
+}
+
+
+  /* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+    left: -47px;
+}
+  
+  /* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+    right: -47px;
+}
+
+
+.div-proj{
+    display: flex;
+    flex-direction: column;
+    padding: 17px 1px 17px 1px;
+    width: 600px;
+}
+
+.proj-hidden{
+    display: flex;
+    flex-direction: column;
+    max-height: 0px;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+.proj-card:hover .proj-hidden{
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+.proj-card:active .proj-hidden{
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+.proj-prev{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px dashed #616161;
+    border-top:  0.5px dashed #616161;
+}
+
+.proj-prev div{
+    padding: 10px;
+    text-align: center;
+}
+
+
+.proj-prev h5{
+    color: #ff4545;
+}
+
+.proj-prev img{
+    margin: 1px;
+}
+
+.proj-hidden li{
+    padding: 5px;
+}
+
+.proj-prev a{
+    font-size: 11px;
+    color: #ff4545;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.proj-prev a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    border-top: 0.5px solid #BDBDBD;
+}
+
+
