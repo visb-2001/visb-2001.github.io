@@ -32,16 +32,18 @@ header{
     padding-bottom: 10px;
 }
 
+.navbar{
+    font-size: 1em;
+}
+
 .navbar a{
     font-family: Courier;
-    font-size: 15px;
     text-decoration: none;
     color:#ff4545;
 }
 
 .navbar b{
     font-family: monospace;
-    font-size: 15px;
     text-decoration: none;
 }
 
@@ -68,6 +70,7 @@ header{
 
 .ppimg{
     display: flex;
+    align-items: center;
 }
 
 img{
@@ -293,4 +296,14 @@ footer {
     border-top: 0.5px solid #BDBDBD;
 }
 
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .ppimg {
+      flex-direction: column-reverse;
+    }
+
+    .proj-prev{
+        flex-direction: column;
+    }
+  }
 
